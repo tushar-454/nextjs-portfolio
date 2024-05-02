@@ -8,6 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xsss: '320px',
+        xss: '375px',
+        xs: '425px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px',
+      },
       colors: {
         'picton-blue': {
           '50': '#effaff',
@@ -34,6 +44,19 @@ const config: Config = {
           '800': '#ac0877',
           '900': '#8f0c65',
           '950': '#58003a',
+        },
+        'east-bay': {
+          '50': '#f4f6fa',
+          '100': '#e6e9f3',
+          '200': '#d2d8eb',
+          '300': '#b3bedd',
+          '400': '#8f9dcb',
+          '500': '#7480bd',
+          '600': '#626aaf',
+          '700': '#56599f',
+          '800': '#4a4c83',
+          '900': '#42446e',
+          '950': '#2a2a41',
         },
       },
     },
