@@ -1,8 +1,8 @@
 'use client';
 import Link from 'next/link';
 import { FC, useState } from 'react';
-import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import { MdArrowDropDown } from 'react-icons/md';
+import SocialLinks from '../SocialLinks';
 
 interface NavProps {}
 
@@ -62,17 +62,7 @@ const Nav: FC<NavProps> = () => {
           className={`block text-5xl text-gray-400 transition-all md:hidden ${isMenuOpen ? 'rotate-180' : 'rotate-0'}`}
         />
 
-        <span className='flex items-center gap-2'>
-          <Link href='#'>
-            <FaGithub className='text-2xl text-gray-500 transition-all hover:text-black' />
-          </Link>
-          <Link href='#'>
-            <FaLinkedin className='text-2xl text-gray-500 transition-all hover:text-black' />
-          </Link>
-          <Link href='#'>
-            <FaYoutube className='text-2xl text-gray-500 transition-all hover:text-black' />
-          </Link>
-        </span>
+        <SocialLinks />
       </div>
     </div>
   );
