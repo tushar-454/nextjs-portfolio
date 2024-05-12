@@ -20,7 +20,7 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const { description, links, techstack, thumb, title } = project;
   return (
-    <div className='rounded-2xl shadow-xl'>
+    <div className='flex flex-col rounded-2xl rounded-br-2xl bg-neutral-50 shadow-xl dark:bg-neutral-800'>
       <Image
         src={thumb}
         width={1080}
@@ -28,12 +28,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         alt={title}
         className='rounded-t-2xl shadow'
       />
-      <div className='p-5'>
-        <h1 className='text-2xl font-medium'>{title}</h1>
-        <p className='mt-2 flex-grow text-lg font-light'>
+      <div className='flex h-full flex-col p-5'>
+        <h1 className='text-2xl font-medium text-neutral-600 dark:text-neutral-100'>
+          {title}
+        </h1>
+        <p className='mt-2 flex-grow text-lg font-light text-neutral-600 dark:text-neutral-100'>
           {description.slice(0, 200)} . . .
         </p>
-        <p className='my-4'>
+        <p className='my-4 text-neutral-600 dark:text-neutral-200'>
           Tech stack:{' '}
           <span className='font-light italic'>{techstack.toString()}</span>
         </p>
@@ -42,9 +44,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             passHref={true}
             href={links.frontend}
             target='_blank'
-            className='flex items-center justify-center gap-1 font-medium underline underline-offset-2'
+            className='flex items-center justify-center gap-1 font-medium text-neutral-600 underline underline-offset-2 dark:text-neutral-300'
           >
-            <Image src={githubIco} alt='github icon' /> Frontend
+            <Image
+              src={githubIco}
+              className='invert-0 dark:invert'
+              alt='github icon'
+            />{' '}
+            Frontend
           </Link>
           <Link
             passHref={true}
@@ -52,7 +59,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             target='_blank'
             className='group relative cursor-pointer'
           >
-            <Image src={liveIco} alt='live link icon' />
+            <Image
+              src={liveIco}
+              className='invert-0 dark:invert'
+              alt='live link icon'
+            />
             <p
               id='tooltrip'
               className='invisible absolute -top-6 left-2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-lg bg-black px-2 py-1 text-white opacity-0 transition-all group-hover:visible group-hover:opacity-100'
@@ -65,9 +76,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             passHref={true}
             href={links.backend}
             target='_blank'
-            className='flex items-center justify-center gap-1 font-medium underline underline-offset-2'
+            className='flex items-center justify-center gap-1 font-medium text-neutral-600 underline underline-offset-2 dark:text-neutral-300'
           >
-            <Image src={githubIco} alt='github icon' /> Backend
+            <Image
+              src={githubIco}
+              className='invert-0 dark:invert'
+              alt='github icon'
+            />{' '}
+            Backend
           </Link>
         </div>
       </div>

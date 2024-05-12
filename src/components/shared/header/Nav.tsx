@@ -17,7 +17,7 @@ const Nav: FC<NavProps> = () => {
           <li>
             <Link
               href='/'
-              className='font-medium text-gray-500 transition-all hover:text-black'
+              className='font-medium text-gray-500 transition-all hover:text-black dark:text-neutral-100'
             >
               Home
             </Link>
@@ -25,7 +25,7 @@ const Nav: FC<NavProps> = () => {
           <li>
             <Link
               href='/about'
-              className='font-medium text-gray-500 transition-all hover:text-black'
+              className='font-medium text-gray-500 transition-all hover:text-black dark:text-neutral-100'
             >
               About
             </Link>
@@ -33,7 +33,7 @@ const Nav: FC<NavProps> = () => {
           <li>
             <Link
               href='/tech-stack'
-              className='font-medium text-gray-500 transition-all hover:text-black'
+              className='font-medium text-gray-500 transition-all hover:text-black dark:text-neutral-100'
             >
               Tech Stack
             </Link>
@@ -41,7 +41,7 @@ const Nav: FC<NavProps> = () => {
           <li>
             <Link
               href='/projects'
-              className='font-medium text-gray-500 transition-all hover:text-black'
+              className='font-medium text-gray-500 transition-all hover:text-black dark:text-neutral-100'
             >
               Projects
             </Link>
@@ -49,7 +49,7 @@ const Nav: FC<NavProps> = () => {
           <li>
             <Link
               href='/contact'
-              className='font-medium text-gray-500 transition-all hover:text-black'
+              className='font-medium text-gray-500 transition-all hover:text-black dark:text-neutral-100'
             >
               Contact
             </Link>
@@ -59,7 +59,7 @@ const Nav: FC<NavProps> = () => {
       <div className='flex items-center justify-center gap-2'>
         <MdArrowDropDown
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className={`block text-5xl text-gray-400 transition-all md:hidden ${isMenuOpen ? 'rotate-180' : 'rotate-0'}`}
+          className={`block text-5xl text-gray-400 transition-all md:hidden dark:text-neutral-100 ${isMenuOpen ? 'rotate-180' : 'rotate-0'}`}
         />
 
         <SocialLinks />

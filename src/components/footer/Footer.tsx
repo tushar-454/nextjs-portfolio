@@ -4,7 +4,7 @@ import Logo from '../shared/header/Logo';
 
 const Footer = () => {
   return (
-    <footer className='border-t-2'>
+    <footer className='border-t-2 bg-neutral-100 dark:bg-[#191919]'>
       <Container>
         <div className='flex flex-col items-center justify-between py-5 sm:flex-row'>
           <Logo />
