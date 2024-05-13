@@ -36,7 +36,7 @@ const Setting = () => {
   return (
     <div
       onClick={() => setIsOpen(!isOpen)}
-      className={`fixed bottom-4 right-4 cursor-pointer rounded-xl bg-gray-300 p-3`}
+      className={`fixed bottom-4 right-4 z-[99999] cursor-pointer rounded-xl bg-gray-300 p-3`}
     >
       <div className='relative'>
         <CiSettings
