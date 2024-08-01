@@ -9,7 +9,7 @@ const page = () => {
       <Container>
         <PageHead title='Projects' description='Things I’ve built so far' />
         <div className='grid grid-cols-1 gap-10 py-20 sm:grid-cols-2 lg:grid-cols-3'>
-          {projectsDatabase.map((project: ProjectData, index: number) => (
+          {projectsDatabase?.map((project: ProjectData, index: number) => (
             <ProjectCard key={index} project={project} />
           ))}
         </div>
