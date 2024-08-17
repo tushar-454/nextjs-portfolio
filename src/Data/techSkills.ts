@@ -12,6 +12,10 @@ const techSkills: TechSkill[] = [
     percentage: '75%',
   },
   {
+    name: 'Bootstrap',
+    percentage: '60%',
+  },
+  {
     name: 'Tailwind CSS',
     percentage: '80%',
   },
@@ -28,6 +32,18 @@ const techSkills: TechSkill[] = [
     percentage: '79%',
   },
   {
+    name: 'VueJS',
+    percentage: '40%',
+  },
+  {
+    name: 'NextJS',
+    percentage: '50%',
+  },
+  {
+    name: 'Redux, Redux Toolkit',
+    percentage: '30%',
+  },
+  {
     name: 'Node',
     percentage: '55%',
   },
@@ -40,12 +56,16 @@ const techSkills: TechSkill[] = [
     percentage: '40%',
   },
   {
+    name: 'Git & GitHub',
+    percentage: '70%',
+  },
+  {
     name: 'Firebase',
     percentage: '60%',
   },
   {
-    name: 'Git & GitHub',
-    percentage: '70%',
+    name: 'Postman',
+    percentage: '30%',
   },
 ];
 
