@@ -1,3 +1,4 @@
+import foodDeliveryThumb from '@/assets/foodDeliveryThumb.webp';
 import ministoreThumb from '@/assets/mini-store.webp';
 import newforgeThumb from '@/assets/newforgeThumb.webp';
 import pulsepointThumb from '@/assets/pulsepointThumb.webp';
@@ -15,6 +16,29 @@ export type ProjectData = {
   };
 };
 const projectsDatabase: ProjectData[] = [
+  {
+    thumb: foodDeliveryThumb,
+    title: 'Food Delivery App',
+    description:
+      'This project is a full-stack food delivery application that allows users to browse foods, view menus, add items to their cart, and place orders. Users can also view their order history, costs, and cancel orders. Admins have a dedicated dashboard to oversee site-wide operations, manage users, products, and orders. This project incorporates user authentication, product management, order tracking, and an admin panel for seamless administration.',
+    techstack: [
+      'React',
+      ' TypeScript',
+      ' Tailwind',
+      ' React-Redux',
+      ' Redux Toolkit',
+      ' Node.js',
+      ' Express',
+      ' Mongoose',
+      ' MongoDB',
+      ' JWT',
+    ],
+    links: {
+      live: 'https://food-delivery-frontend-wine.vercel.app/',
+      frontend: 'https://github.com/tushar-454/food-delivery-frontend',
+      backend: 'https://github.com/tushar-454/food-delivery-backend',
+    },
+  },
   {
     thumb: ministoreThumb,
     title: 'Mini Store',
