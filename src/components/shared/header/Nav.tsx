@@ -19,6 +19,7 @@ const Nav: FC<NavProps> = () => {
             <li>
               <Link
                 href='/'
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className='font-medium text-gray-500 transition-all hover:text-black dark:text-neutral-100'
               >
                 Home
@@ -27,6 +28,7 @@ const Nav: FC<NavProps> = () => {
             <li>
               <Link
                 href='/about'
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className='font-medium text-gray-500 transition-all hover:text-black dark:text-neutral-100'
               >
                 About
@@ -35,6 +37,7 @@ const Nav: FC<NavProps> = () => {
             <li>
               <Link
                 href='/tech-stack'
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className='font-medium text-gray-500 transition-all hover:text-black dark:text-neutral-100'
               >
                 Tech Stack
@@ -43,6 +46,7 @@ const Nav: FC<NavProps> = () => {
             <li>
               <Link
                 href='/projects'
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className='font-medium text-gray-500 transition-all hover:text-black dark:text-neutral-100'
               >
                 Projects
@@ -51,6 +55,7 @@ const Nav: FC<NavProps> = () => {
             <li>
               <Link
                 href='/contact'
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className='font-medium text-gray-500 transition-all hover:text-black dark:text-neutral-100'
               >
                 Contact
