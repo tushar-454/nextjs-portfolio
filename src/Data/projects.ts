@@ -1,4 +1,5 @@
 import foodDeliveryThumb from '@/assets/foodDeliveryThumb.webp';
+import medicineStoreThumb from '@/assets/medicineStoreThumb.webp';
 import ministoreThumb from '@/assets/mini-store.webp';
 import newforgeThumb from '@/assets/newforgeThumb.webp';
 import pulsepointThumb from '@/assets/pulsepointThumb.webp';
@@ -27,6 +28,7 @@ const projectsDatabase: ProjectData[] = [
       ' Tailwind',
       ' React-Redux',
       ' Redux Toolkit',
+      ' SSL Commerz Payment Gateway',
       ' Node.js',
       ' Express',
       ' Mongoose',
@@ -59,6 +61,29 @@ const projectsDatabase: ProjectData[] = [
       live: 'https://mini-store-nine.vercel.app/',
       frontend: 'https://github.com/tushar-454/ecommerce-ms',
       backend: 'https://github.com/tushar-454/ecommerce-ms-backend',
+    },
+  },
+  {
+    thumb: medicineStoreThumb,
+    title: 'Online Medicine Store',
+    description:
+      'The Medicine E-Commerce project aims to provide a convenient platform for users to purchase medicines online. It allows users to browse through a wide range of medicines, add them to their cart, and complete the purchase securely. The frontend is responsible for providing an intuitive user interface that enables users to interact with the platform seamlessly.',
+    techstack: [
+      'NextJS',
+      ' Tailwind',
+      ' Redux Toolkit',
+      ' Redux Persist',
+      ' Node.js',
+      ' Node Mailer',
+      ' Express',
+      ' Mongoose',
+      ' MongoDB',
+      ' JWT',
+    ],
+    links: {
+      live: 'https://healthifyrx.vercel.app/',
+      frontend: 'https://github.com/tushar-454/medicine-e-commerce-frontend',
+      backend: 'https://github.com/tushar-454/medicine-e-commerce-backend',
     },
   },
   {
