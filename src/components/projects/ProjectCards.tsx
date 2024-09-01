@@ -7,7 +7,9 @@ const ProjectCards = () => {
       {projectsDatabase
         ?.slice(0, 3)
         ?.map((project: ProjectData, index: number) => (
-          <ProjectCard key={index} project={project} />
+          <div key={index} data-aos='flip-left' data-aos-duration='1000'>
+            <ProjectCard project={project} />
+          </div>
         ))}
     </div>
   );

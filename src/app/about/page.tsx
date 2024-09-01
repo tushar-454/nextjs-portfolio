@@ -11,7 +11,11 @@ const page = () => {
       <Container>
         <div className='space-y-16 py-20'>
           <AboutLayout title='About'>
-            <p className='text-neutral-900 dark:text-neutral-400'>
+            <p
+              data-aos='fade-down'
+              data-aos-duration='300'
+              className='text-neutral-900 dark:text-neutral-400'
+            >
               Hello there! 👋 I'm Tushar Imran, a passionate front-end developer
               with a focus on crafting seamless user experiences. My expertise
               lies in leveraging the power of JavaScript and React to build
@@ -48,7 +52,11 @@ const page = () => {
                 ))}
               </>
             ) : (
-              <h1 className='text-lg font-bold italic text-neutral-900 dark:text-neutral-400'>
+              <h1
+                data-aos='fade-down'
+                data-aos-duration='300'
+                className='text-lg font-bold italic text-neutral-900 dark:text-neutral-400'
+              >
                 No experience. I'm Fresher
               </h1>
             )}

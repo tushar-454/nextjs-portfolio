@@ -3,8 +3,11 @@ import { TbHandClick } from 'react-icons/tb';
 
 const page = () => {
   return (
-    <main className='h-screen bg-neutral-100 dark:bg-[#191919]'>
-      <div className='flex h-full flex-col items-center gap-4 pt-40'>
+    <main className='h-screen overflow-hidden bg-neutral-100 dark:bg-[#191919]'>
+      <div
+        data-aos='zoom-out'
+        className='flex h-full flex-col items-center gap-4 pt-40'
+      >
         <h1 className='text-center text-4xl font-bold text-picton-blue-900 dark:text-neutral-100'>
           For any questions please mail us:
         </h1>

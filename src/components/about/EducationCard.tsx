@@ -10,7 +10,11 @@ const EducationCard: React.FC<EducationCardProps> = ({ education }) => {
   const { atPresent, endDate, institute, position, startDate, type } =
     education;
   return (
-    <div className='mb-10 w-full space-y-2 border-b pb-5 md:w-[768px]'>
+    <div
+      data-aos='fade-down'
+      data-aos-duration='300'
+      className='mb-10 w-full space-y-2 border-b pb-5 md:w-[768px]'
+    >
       <div className='flex items-center justify-between gap-10'>
         <h3 className='text-2xl font-medium text-neutral-900 dark:text-neutral-300'>
           {position}

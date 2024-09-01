@@ -1,4 +1,5 @@
 import Header from '@/components/shared/header/Header';
+import AOSConfig from '@/config/AOS';
 import type { Metadata } from 'next';
 import { Lexend } from 'next/font/google';
 import './globals.css';
@@ -18,8 +19,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={lexend.className}>
-        <Header />
-        {children}
+        <AOSConfig>
+          <Header />
+          {children}
+        </AOSConfig>
       </body>
     </html>
   );

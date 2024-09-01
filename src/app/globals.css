@@ -21,3 +21,23 @@ html {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
+
+.stickyHeader {
+  transition: all 0.5s;
+  animation: stickyHeaderanimaiton 0.5s 1;
+  position: sticky;
+  top: 0px;
+}
+
+@keyframes stickyHeaderanimaiton {
+  0% {
+    transition: all 0.5s;
+    position: relative;
+    top: -90px;
+  }
+  100% {
+    transition: all 0.5s;
+    position: sticky;
+    top: 0px;
+  }
+}

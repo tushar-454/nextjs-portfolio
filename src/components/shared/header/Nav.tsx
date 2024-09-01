@@ -11,7 +11,7 @@ const Nav: FC<NavProps> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   return (
     <>
-      <div className='flex items-center justify-center gap-10'>
+      <div className='z-[99999999] flex items-center justify-center gap-10'>
         <nav
           className={`absolute left-0 top-[82px] w-full origin-top scale-y-0 transition-all md:static md:w-auto md:scale-y-100 ${isMenuOpen ? 'scale-y-100' : 'scale-y-0'}`}
         >

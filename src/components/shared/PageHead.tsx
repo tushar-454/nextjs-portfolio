@@ -6,10 +6,17 @@ interface PageHeadProps {
 const PageHead: React.FC<PageHeadProps> = ({ title, description }) => {
   return (
     <div className='flex flex-col gap-2 py-10'>
-      <h1 className='text-4xl font-bold text-east-bay-900 dark:text-neutral-100'>
+      <h1
+        data-aos='fade-down'
+        className='text-4xl font-bold text-east-bay-900 dark:text-neutral-100'
+      >
         {title}
       </h1>
-      <p className='text-xl text-neutral-600 dark:text-neutral-400'>
+      <p
+        data-aos='fade-down'
+        data-aos-duration='300'
+        className='text-xl text-neutral-600 dark:text-neutral-400'
+      >
         {description}
       </p>
     </div>
