@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { FC, useState } from 'react';
 import { MdArrowDropDown } from 'react-icons/md';
 import Settings from '../Settings';
@@ -9,6 +10,7 @@ interface NavProps {}
 
 const Nav: FC<NavProps> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const pathname = usePathname();
   return (
     <>
       <div className='z-[99999999] flex items-center justify-center gap-10'>
@@ -20,7 +22,7 @@ const Nav: FC<NavProps> = () => {
               <Link
                 href='/'
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className='font-medium text-gray-500 transition-all hover:text-black dark:text-neutral-100'
+                className={`font-medium transition-all hover:text-black dark:text-neutral-100 ${pathname === '/' ? 'text-black' : 'text-gray-500'}`}
               >
                 Home
               </Link>
@@ -29,7 +31,7 @@ const Nav: FC<NavProps> = () => {
               <Link
                 href='/about'
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className='font-medium text-gray-500 transition-all hover:text-black dark:text-neutral-100'
+                className={`font-medium transition-all hover:text-black dark:text-neutral-100 ${pathname === '/about' ? 'text-black' : 'text-gray-500'}`}
               >
                 About
               </Link>
@@ -38,7 +40,7 @@ const Nav: FC<NavProps> = () => {
               <Link
                 href='/tech-stack'
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className='font-medium text-gray-500 transition-all hover:text-black dark:text-neutral-100'
+                className={`font-medium transition-all hover:text-black dark:text-neutral-100 ${pathname === '/tech-stack' ? 'text-black' : 'text-gray-500'}`}
               >
                 Tech Stack
               </Link>
@@ -47,7 +49,7 @@ const Nav: FC<NavProps> = () => {
               <Link
                 href='/projects'
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className='font-medium text-gray-500 transition-all hover:text-black dark:text-neutral-100'
+                className={`font-medium transition-all hover:text-black dark:text-neutral-100 ${pathname === '/projects' ? 'text-black' : 'text-gray-500'}`}
               >
                 Projects
               </Link>
@@ -56,7 +58,7 @@ const Nav: FC<NavProps> = () => {
               <Link
                 href='/contact'
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className='font-medium text-gray-500 transition-all hover:text-black dark:text-neutral-100'
+                className={`font-medium transition-all hover:text-black dark:text-neutral-100 ${pathname === '/contact' ? 'text-black' : 'text-gray-500'}`}
               >
                 Contact
               </Link>
