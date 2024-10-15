@@ -8,6 +8,16 @@ export type Experience = {
   atPresent: boolean;
 };
 
-const experiences: Experience[] = [];
+const experiences: Experience[] = [
+  {
+    position: 'Frontend Developer (React)',
+    type: 'Internship',
+    company: 'MonsterDevs Ltd',
+    location: 'Rangpur, Bangladesh',
+    startDate: '10-10-2024',
+    endDate: 'At Present',
+    atPresent: true,
+  },
+];
 
 export default experiences;
