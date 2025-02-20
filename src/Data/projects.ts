@@ -5,6 +5,7 @@ import ministoreThumb from '@/assets/mini-store.webp';
 import newforgeThumb from '@/assets/newforgeThumb.webp';
 import pulsepointThumb from '@/assets/pulsepointThumb.webp';
 import sparrowThumb from '@/assets/sparrow.webp';
+import storeitThumb from '@/assets/storeitThumb.webp';
 
 export type ProjectData = {
   thumb: any;
@@ -18,6 +19,26 @@ export type ProjectData = {
   };
 };
 const projectsDatabase: ProjectData[] = [
+  {
+    thumb: storeitThumb,
+    title: 'StoreIt',
+    description:
+      'StoreIt is a full-stack NextJS project with TypeScript, Tailwind CSS, React-Redux, Redux Toolkit, RTK Query, and Appwrite for backend. It clone for Google Drive. Users can upload files, share files with others, and manage their files. The project also includes user authentication, file management.',
+    techstack: [
+      'NextJS',
+      ' TypeScript',
+      ' Tailwind',
+      ' React-Redux',
+      ' Redux Toolkit',
+      ' RTK Query',
+      ' Appwrite',
+    ],
+    links: {
+      live: 'https://mystore-two-swart.vercel.app',
+      frontend: 'https://github.com/tushar-454/mystore',
+      backend: 'https://github.com/tushar-454/mystore',
+    },
+  },
   {
     thumb: homeMakeCakeThumb,
     title: 'Adnan Homemade Cake',
