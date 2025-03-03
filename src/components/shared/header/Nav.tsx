@@ -17,7 +17,7 @@ const Nav: FC<NavProps> = () => {
         <nav
           className={`absolute left-0 top-[82px] w-full origin-top scale-y-0 transition-all md:static md:w-auto md:scale-y-100 ${isMenuOpen ? 'scale-y-100' : 'scale-y-0'}`}
         >
-          <ul className='flex flex-col gap-5 bg-gray-100 p-4  dark:bg-neutral-800 md:flex-row md:gap-10 md:bg-transparent md:p-0 md:dark:bg-transparent'>
+          <ul className='flex flex-col gap-5 bg-gray-100 p-4  dark:bg-neutral-800 md:flex-row md:gap-6 md:bg-transparent md:p-0 md:dark:bg-transparent lg:gap-10'>
             <li>
               <Link
                 href='/'
@@ -52,6 +52,15 @@ const Nav: FC<NavProps> = () => {
                 className={`font-medium transition-all hover:text-black dark:text-neutral-100 ${pathname === '/projects' ? 'text-black' : 'text-gray-500'}`}
               >
                 Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                href='/articles'
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className={`font-medium transition-all hover:text-black dark:text-neutral-100 ${pathname === '/articles' ? 'text-black' : 'text-gray-500'}`}
+              >
+                Articles
               </Link>
             </li>
             <li>

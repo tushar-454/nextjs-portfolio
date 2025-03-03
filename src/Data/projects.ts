@@ -1,7 +1,6 @@
 import foodDeliveryThumb from '@/assets/foodDeliveryThumb.webp';
 import homeMakeCakeThumb from '@/assets/homeMadeCakeThumb.webp';
 import medicineStoreThumb from '@/assets/medicineStoreThumb.webp';
-import ministoreThumb from '@/assets/mini-store.webp';
 import newforgeThumb from '@/assets/newforgeThumb.webp';
 import pulsepointThumb from '@/assets/pulsepointThumb.webp';
 import sparrowThumb from '@/assets/sparrow.webp';
@@ -40,31 +39,6 @@ const projectsDatabase: ProjectData[] = [
     },
   },
   {
-    thumb: homeMakeCakeThumb,
-    title: 'Adnan Homemade Cake',
-    description:
-      'Adnan Homemade Cake House is a full-stack e-commerce application that enables users to browse cakes, add them to their cart, and place orders. Users can view their order history, costs, and cancel orders. Admins have a dedicated dashboard to oversee site-wide operations, manage users, products, and orders. This project incorporates user authentication, product management, order tracking, and an admin panel for seamless administration.',
-    techstack: [
-      'NextJS',
-      ' TypeScript',
-      ' Tailwind',
-      ' Shadcn UI',
-      ' React-Redux',
-      ' Redux Toolkit',
-      ' RTK Query',
-      ' Node.js',
-      ' Express',
-      ' Mongoose',
-      ' MongoDB',
-      ' JWT',
-    ],
-    links: {
-      live: 'https://adnanhomemadecake.vercel.app',
-      frontend: 'https://github.com/tushar-454/adnan-homemade-cake-frontend',
-      backend: 'https://github.com/tushar-454/adnan-homemade-cake-backend',
-    },
-  },
-  {
     thumb: foodDeliveryThumb,
     title: 'Food Delivery App',
     description:
@@ -89,7 +63,7 @@ const projectsDatabase: ProjectData[] = [
     },
   },
   {
-    thumb: ministoreThumb,
+    thumb: homeMakeCakeThumb,
     title: 'Mini Store',
     description:
       'Build a comprehensive e-commerce web application where users can browse products, add items to their cart, create wishlists, and manage their profiles. Users can view their order history, costs, and cancel orders. Admins have a dedicated dashboard to oversee site-wide operations, manage users, products, and orders. This project incorporates user authentication, product management, order tracking, and an admin panel for seamless administration.',
@@ -105,7 +79,7 @@ const projectsDatabase: ProjectData[] = [
       ' JWT',
     ],
     links: {
-      live: 'https://mini-store-nine.vercel.app/',
+      live: 'https://mini-store-eight.vercel.app/',
       frontend: 'https://github.com/tushar-454/ecommerce-ms',
       backend: 'https://github.com/tushar-454/ecommerce-ms-backend',
     },
