@@ -1,11 +1,102 @@
 export type TArticle = {
   title: string;
   slug: string;
-  category: 'Security';
+  category: 'Security' | 'JavaScript';
   content: string;
 };
 
 export const articles: TArticle[] = [
+  {
+    title: 'JavaScript Scopes - the ultimate weirdo!',
+    slug: 'javascript-scopes-the-ultimate-weirdo',
+    category: 'JavaScript',
+    content: `
+    
+## JavaScript Scopes - the ultimate weirdo! - -
+
+\`\`\`js
+var x = 23;
+// parent er dunia
+function myFunc() {
+  // myFunc/child er dunia
+  var y = 10;
+  console.log(\`\${x} from my Func\`);
+}
+myFunc(); // output 23 from my Func
+console.log(x); // output 23
+\`\`\`
+
+## Scope
+
+স্কোপ কে আমরা দুনিয়া হিসেবে কল্পনা করতে পারি ধরুন এখানে x নামে একটা ভেরিয়েবল আছে যেহেতু এটা দ্বিতীয় {} মধ্যে নাই তাই বাই ডিফল্ট এটা Window মধ্যে সেট হয়ে যাবে এবং এই ভেরিয়েবলকে আমরা যে কোন জায়গা থেকে ব্যবহার করতে পারব।
+
+যদি আমরা যে কোন জায়গা থেকে \`console.log(x)\` করে x কে দেখি তাহলে আমরা আউটপুট দেখতে পাচ্ছি। এমনকি ফাংশনের ভিতর থেকে কল করেও আমরা x কে পেতে পারি।
+
+এর কারণ কি? এর কারণ হলো এক হচ্ছে গ্লোবাল ভেরিয়েবল যেটা এখন Window এর মধ্যে সেট হয়ে আছে তাই আমরা যেখান থেকেই হোক এটাকে ব্যবহার করতে পারি যেহেতু এটা Window এর মধ্যে সেট করা আছে তাই এক্স এর পূর্বে \`Window.x\` লিখতে হয় না।
+
+এখানে x যদি Parent ধরা হয় এবং ফাংশন কে যদি Child ধরা হয় তাহলে প্যারেন্টের ভেরিয়েবল/সম্পত্তি কে চাইল্ড খুব সহজে ব্যবহার করতে পারবে একটা উদাহরণ দিলে খুব সহজেই বুঝা যায় বাস্তব লাইফে পিতা-মাতা আমাদের জন্য কোনো কিছু কিনে আনলে সন্তানেরা তা ব্যবহার/খেতে পারে তাতে কোন অনুমতি দরকার পরে না বেশিরভাগই।
+
+কিন্তু কোডে খেয়াল করে দেখুন ফাংশনের ভিতর একটা ভেরিয়েবল সেট করা হয়েছে \` var y = 10;\` এটাকে যদি আমরা বাহিরে ইউজ করতে চাই তাহলে কিন্তু আমরা পারবো না কারণ আমরা এখানে ধরে নিয়েছি ফাংশন হচ্ছে চাইল্ড চাইল্ড এর কোন কিছু প্যারেন্ট ব্যবহার করতে পারবে না। এটার একটা উদাহরন দিলে বলা যায় সন্তানেরা কোনো কিছু কিনে আনলে তা বেশিরভাগই পেরেন্ট কে না দিয়ে খেয়ে ফেলে। এখানে জাভাস্ক্রিপ্ট ও পেরেন্ট চাইল্ড এর কোনো কিছু ব্যবহার করতে পারবে না।
+
+## Child can change parent value
+
+\`\`\`js
+var x = 23;
+// parent er dunia
+function myFunc() {
+  // myFunc/child er dunia
+  x = 10;
+  var y = 10;
+  console.log(\`\${x} from my Func\`);
+}
+myFunc(); // output 10 from my Func
+console.log(x); // output 10
+\`\`\`
+
+এখানে কিন্তু চাইল্ড পেরেন্ট এর ভ্যালু চেঞ্জ করে দিবে। যদি আমরা var use না করি তাহলে এর প্রব্লেম হবে।
+
+কিন্তু এটা তো একটু কেমন জানি বেপার টা রাইট এটা আটকানোর জন্য আমরা আমাদের জাভাস্ক্রিপ্ট ফাইলএ \`'use strict'\` টা ব্যবহার করতে পারি তাতে করে আমদেরকে error দেখাবে।
+
+## Scope can make var same name
+
+\`\`\`js
+var x = 23;
+// parent er dunia
+function myFunc() {
+  // myFunc/child er dunia
+  var x = 10;
+  var y = 10;
+  console.log(\`\${x} from my Func\`);
+}
+myFunc(); // output 10 from my Func
+console.log(x); // output 23
+\`\`\`
+
+কিন্তু যদি আমরা child এর ভিতর var use করে ভেরিয়েবল তৈরি করি তাহলে অইটা হবে \`myFunc()\` চাইল্ড দুনিয়ার ভেরিয়েবল। যেটা Window থেকে সম্পূর্ণ আলাদা।
+
+## Experiment
+
+কি হবে যদি আমার x কে ডিফাইন না করে তাকে চাইল্ড এ আসাইন করতে চাই
+
+\`\`\`js
+// parent er dunia
+function myFunc() {
+  // myFunc/child er dunia
+  x = 10;
+  console.log(\`\${x} from my Func\`);
+}
+myFunc(); // output 10 from my Func
+\`\`\`
+
+এটা কাজ করবে কারন জাভাস্ক্রিপ্ট নিজে নিজে \`var x;\` ডিফাইন করে নিবে। কিন্তু আমি তো চাচ্ছি আমার x ভেরিয়েবল বাহিরে যাবে না। এটা আটকানোর জন্য আমরা আমাদের জাভাস্ক্রিপ্ট ফাইলএ \`'use strict'\` টা ব্যবহার করতে পারি তাতে করে আমদেরকে error দেখাবে। এতে সুবিধা হলো বাহিরে যদি আমাদের x নামে অন্য কোনো ভেরিয়েবল থাকত তাহলে সব চেঞ্জ হয়ে যেতো।
+
+## Summary
+
+জাভাস্ক্রিপ এ ভেরিয়েবলকে ডিফাইন না করে আসাইন করব না। নাম গুলো একই লেখে কোনো কনফ্লিক্ট করা যাবে না।
+    
+    `,
+  },
+
   {
     title: 'OAuth 2.0: What, Why, When and How works (High Level Overview)',
     slug: 'oauth-2-0-what-why-when-and-how-works',
