@@ -96,7 +96,126 @@ myFunc(); // output 10 from my Func
     
     `,
   },
+  {
+    title: 'JavaScript var, let, const - Not so simple!',
+    slug: 'javascript-var-let-const-not-so-simple',
+    category: 'JavaScript',
+    content: `
+    
+## JavaScript var, let, const - Not so simple!
 
+\`\`\`js
+if (true) {
+  var varVariable = 'This is var';
+}
+
+console.log(varVariable); // output - 'This is var'
+
+if (true) {
+  let letVariable = 'This is let';
+}
+
+console.log(letVariable); // output - Reference error
+\`\`\`
+
+এখানে ১ম এ একটা ব্লক স্কোপ নেওয়া হয়েছে। সেখানে \`var\` দিয়ে একটা ভেরিয়েবল নেওয়া হয়েছে এবং \`console.log(varVariable)\` করা হয়েছে।
+
+এখানে ২য় এ একটা ব্লক স্কোপ নেওয়া হয়েছে। সেখানে \`let\` দিয়ে একটা ভেরিয়েবল নেওয়া হয়েছে এবং \`console.log(letVariable)\` করা হয়েছে।
+
+দুইটার আউটপুট কিন্তু সম্পূর্ন ভিন্ন। এ var দিয়ে ভেরিয়েবল আউটপুট দিচ্ছে let দিচ্ছে error. এর একটা সূক্ষ্ম কারণ হলো স্কোপ। var হলো function স্কোপ আর let হলো ব্লক স্কোপ। যেহেতু if ব্লক স্কোপ তাই var কে বাহির থেকে ও ব্যবহার করা যাচ্ছে কিন্তু let যেহেতু ব্লক স্কোপ তাই if ব্লক এর বাহিরে একে ব্যবহার করতে পারবো না।
+
+যদি let কে আউটপুট হিসাবে পেতে চাই তাহলে তার ব্লক এ \`console.log()\` করতে হবে।
+
+\`\`\`js
+if (true) {
+  var varVariable = 'This is var';
+}
+
+console.log(varVariable); // output - 'This is var'
+
+if (true) {
+  let letVariable = 'This is let';
+  console.log(letVariable); // output - 'This is let'
+}
+\`\`\`
+
+### var কে আমরা মাল্টিপল ডিফাইন করতে পারি কিন্তু let কে করতে পারব না।
+
+\`\`\`js
+if (true) {
+  var varVariable = 'This is var';
+  var varVariable = 'This is var 2'; // আমরা এটা করতে পারব
+}
+
+console.log(varVariable); // output - 'This is var 2' কিন্তু আমাদের চাহিদা মতো আমরা আউটপুট না ও পেতে পারি দেখুন আমাদের আউটপুট চেঞ্জড।
+
+if (true) {
+  let letVariable = 'This is let';
+  let letVariable = 'This is let 2';
+  console.log(letVariable); // output - error - আমার এখানে error পাবো কারন একই নামে আমারা মাল্টিপল টাইম let দিয়ে ভেরিয়েবল ডিফাইন করতে পারব না । কিন্তু চেঞ্জ করতে পারব একই ব্লক এ।
+}
+if (true) {
+  let letVariable = 'This is let';
+  letVariable = 'This is let 2';
+  console.log(letVariable); // output - 'This is let 2'
+}
+// দেখুন এখানে আবার আমরা \`letVariable\` কে দুই জায়গায় ব্যবহার করলাম কি আশ্চার্য এই না এখন নামে ব্যবহার করা যাবে না এখন কি করে হলো। কারন let ব্লক স্কোপ তারা আলাদা আলাদা ব্লক এ আছে তাই করা যাচ্ছে।
+\`\`\`
+
+## Const এ আমার রিডিফাইন করতে পারব না ও রিআসাইন তো প্রশ্ন এ আসে না।
+
+\`\`\`js
+if (true) {
+  const constVariable = 'This is let';
+  const constVariable = 'This is let 2';
+  console.log(constVariable); // output - error - আমার এখানে error পাবো কারন Const এ আমার রিডিফাইন করতে পারব না ও রিআসাইন তো প্রশ্ন এ আসে না।
+}
+\`\`\`
+
+কিন্তু যদি const ভেরিয়েবল এর ভ্যালু \`String, number\` না হয়ে \`Array,Object\` হয় তাহলে আমরা রিডিফাইন করতে পারব না কিন্তু ডাটা আপডেইট করতে পারব।
+
+\`\`\`js
+if (true) {
+  const constVariable = {
+    name: 'JS',
+    age: '25 years',
+  };
+  constVariable.name = 'JavaScript';
+  console.log(constVariable); // output - ✔
+}
+// কিন্তু Const or let যাই হোক তাকে কিন্তু আবার তার ব্লক এর বাহিরে কোনো কিছুই করতে পারব না। এরর আসবে।
+constVariable.name = 'Scripting Language'; // output - error ❌
+console.log(constVariable); // output - error ❌
+\`\`\`
+
+## Remember
+
+var হচ্ছে function স্কোপ
+
+\`\`\`js
+function f() {
+  var a = 5;
+  console.log(a); // output - 5
+}
+console.log(a); // output - error - a is not defind
+f();
+\`\`\`
+
+কিন্তু যদি var কে গ্লোবালি ডিফাইন করতাম তাহলে \`var a = 5\` কে আমরা বাহিরে ও পেতাম এবং ফাংশন এর ভিতর ও পেতাম।
+
+\`\`\`js
+var a = 5;
+function f() {
+  console.log(a); // output - 5
+}
+console.log(a); // output - 5
+f();
+\`\`\`
+
+কারন function এখানে child তাই তার পেরেন্ট সব কিছু সে পেয়ে যাবে।
+
+    `,
+  },
   {
     title: 'OAuth 2.0: What, Why, When and How works (High Level Overview)',
     slug: 'oauth-2-0-what-why-when-and-how-works',
