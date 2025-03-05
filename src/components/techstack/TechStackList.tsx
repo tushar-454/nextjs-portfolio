@@ -126,4 +126,4 @@ const TechStackList = () => {
   );
 };
 
-export default TechStackList;
+export { TechStackList };

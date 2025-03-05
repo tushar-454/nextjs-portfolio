@@ -1,4 +1,4 @@
-import Container from '@/components/shared/Container';
+import { Container } from '@/components/shared/Container';
 import { articles } from '@/Data/articles';
 import 'github-markdown-css/github-markdown.css';
 import { FC } from 'react';

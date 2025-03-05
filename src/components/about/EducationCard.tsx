@@ -38,4 +38,4 @@ const EducationCard: React.FC<EducationCardProps> = ({ education }) => {
   );
 };
 
-export default EducationCard;
+export { EducationCard };

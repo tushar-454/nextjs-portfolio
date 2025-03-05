@@ -1,6 +1,6 @@
 import picture from '@/assets/picture.webp';
 import Image from 'next/image';
-import Container from '../shared/Container';
+import { Container } from '../shared/Container';
 
 const Banner = () => {
   return (
@@ -44,4 +44,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export { Banner };

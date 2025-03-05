@@ -23,4 +23,4 @@ const SectionHead: React.FC<SectionHeadProps> = ({ title, description }) => {
   );
 };
 
-export default SectionHead;
+export { SectionHead };

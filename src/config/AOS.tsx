@@ -16,4 +16,4 @@ const AOSConfig = ({ children }: { children: React.ReactNode }) => {
   return <>{children}</>;
 };
 
-export default AOSConfig;
+export { AOSConfig };

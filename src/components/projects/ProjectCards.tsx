@@ -1,5 +1,5 @@
-import projectsDatabase, { ProjectData } from '@/Data/projects';
-import ProjectCard from './ProjectCard';
+import { ProjectData, projectsDatabase } from '@/Data/projects';
+import { ProjectCard } from './ProjectCard';
 
 const ProjectCards = () => {
   return (
@@ -7,7 +7,7 @@ const ProjectCards = () => {
       {projectsDatabase
         ?.slice(0, 3)
         ?.map((project: ProjectData, index: number) => (
-          <div key={index} data-aos='flip-left' data-aos-duration='1000'>
+          <div key={index} data-aos='zoom-in' data-aos-duration='1000'>
             <ProjectCard project={project} />
           </div>
         ))}
@@ -15,4 +15,4 @@ const ProjectCards = () => {
   );
 };
 
-export default ProjectCards;
+export { ProjectCards };

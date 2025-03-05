@@ -7,7 +7,7 @@ export type Education = {
   atPresent: boolean;
 };
 
-const educations: Education[] = [
+export const educations: Education[] = [
   {
     position: 'Honors Secound Year, Mathematics',
     type: 'Undergraduate',
@@ -17,5 +17,3 @@ const educations: Education[] = [
     atPresent: true,
   },
 ];
-
-export default educations;
