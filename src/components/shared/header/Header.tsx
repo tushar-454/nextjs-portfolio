@@ -1,8 +1,8 @@
 'use client';
 import { useEffect } from 'react';
-import Container from '../Container';
-import Logo from './Logo';
-import Nav from './Nav';
+import { Container } from '../Container';
+import { Logo } from './Logo';
+import { Nav } from './Nav';
 
 const Header = () => {
   let lastScrollTop = 0;
@@ -33,4 +33,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export { Header };

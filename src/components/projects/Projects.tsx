@@ -1,6 +1,6 @@
-import Container from '../shared/Container';
-import SectionHead from '../shared/SectionHead';
-import ProjectCards from './ProjectCards';
+import { Container } from '../shared/Container';
+import { SectionHead } from '../shared/SectionHead';
+import { ProjectCards } from './ProjectCards';
 
 const Projects = () => {
   return (
@@ -18,4 +18,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export { Projects };

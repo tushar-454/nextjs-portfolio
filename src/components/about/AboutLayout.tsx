@@ -1,12 +1,12 @@
 import React from 'react';
-import Title from './Title';
+import { Title } from './Title';
 
 interface LayoutProps {
   title: string;
   children: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ title, children }) => {
+const AboutLayout: React.FC<LayoutProps> = ({ title, children }) => {
   return (
     <div>
       <Title>{title}</Title>
@@ -15,4 +15,4 @@ const Layout: React.FC<LayoutProps> = ({ title, children }) => {
   );
 };
 
-export default Layout;
+export { AboutLayout };

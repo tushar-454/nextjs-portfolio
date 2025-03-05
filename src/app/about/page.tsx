@@ -1,9 +1,9 @@
-import educations, { Education } from '@/Data/educations';
-import experiences, { Experience } from '@/Data/experiences';
-import AboutLayout from '@/components/about/AboutLayout';
-import EducationCard from '@/components/about/EducationCard';
-import ExperienceCard from '@/components/about/ExperienceCard';
-import Container from '@/components/shared/Container';
+import { Education, educations } from '@/Data/educations';
+import { Experience, experiences } from '@/Data/experiences';
+import { AboutLayout } from '@/components/about/AboutLayout';
+import { EducationCard } from '@/components/about/EducationCard';
+import { ExperienceCard } from '@/components/about/ExperienceCard';
+import { Container } from '@/components/shared/Container';
 
 const page = () => {
   return (

@@ -13,4 +13,4 @@ const Title: React.FC<TitleProps> = ({ children }) => {
   );
 };
 
-export default Title;
+export { Title };

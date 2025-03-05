@@ -1,9 +1,9 @@
-import projectsDatabase, { ProjectData } from '@/Data/projects';
-import ProjectCard from '@/components/projects/ProjectCard';
-import Container from '@/components/shared/Container';
-import PageHead from '@/components/shared/PageHead';
+import { ProjectData, projectsDatabase } from '@/Data/projects';
+import { ProjectCard } from '@/components/projects/ProjectCard';
+import { Container } from '@/components/shared/Container';
+import { PageHead } from '@/components/shared/PageHead';
 
-const page = () => {
+const Projects = () => {
   return (
     <main className='bg-neutral-100 dark:bg-[#191919]'>
       <Container>
@@ -18,4 +18,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Projects;

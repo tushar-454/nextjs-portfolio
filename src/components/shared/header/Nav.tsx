@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FC, useState } from 'react';
 import { MdArrowDropDown } from 'react-icons/md';
-import Settings from '../Settings';
-import SocialLinks from '../SocialLinks';
+import { Settings } from '../Settings';
+import { SocialLinks } from '../SocialLinks';
 
 interface NavProps {}
 
@@ -88,4 +88,4 @@ const Nav: FC<NavProps> = () => {
   );
 };
 
-export default Nav;
+export { Nav };

@@ -1,5 +1,5 @@
-import Header from '@/components/shared/header/Header';
-import AOSConfig from '@/config/AOS';
+import { Header } from '@/components/shared/header/Header';
+import { AOSConfig } from '@/config/AOS';
 import type { Metadata } from 'next';
 import { Lexend } from 'next/font/google';
 import './globals.css';

@@ -23,4 +23,4 @@ const PageHead: React.FC<PageHeadProps> = ({ title, description }) => {
   );
 };
 
-export default PageHead;
+export { PageHead };

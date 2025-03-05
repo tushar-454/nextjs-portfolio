@@ -1,5 +1,5 @@
-import techSkills, { TechSkill } from '@/Data/techSkills';
-import TeckSkillBar from './TeckSkillBar';
+import { TechSkill, techSkills } from '@/Data/techSkills';
+import { TeckSkillBar } from './TeckSkillBar';
 
 const TechSkills = () => {
   return (
@@ -11,4 +11,4 @@ const TechSkills = () => {
   );
 };
 
-export default TechSkills;
+export { TechSkills };

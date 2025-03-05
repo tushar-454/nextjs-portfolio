@@ -8,7 +8,7 @@ export type Experience = {
   atPresent: boolean;
 };
 
-const experiences: Experience[] = [
+export const experiences: Experience[] = [
   {
     position: 'Frontend Developer (React)',
     type: 'Internship',
@@ -19,5 +19,3 @@ const experiences: Experience[] = [
     atPresent: true,
   },
 ];
-
-export default experiences;

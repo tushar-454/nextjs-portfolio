@@ -23,4 +23,4 @@ const TeckSkillBar: React.FC<TeckSkillBarProps> = ({ skill }) => {
   );
 };
 
-export default TeckSkillBar;
+export { TeckSkillBar };

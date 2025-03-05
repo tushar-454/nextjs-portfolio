@@ -2,7 +2,7 @@ export type TechSkill = {
   name: string;
   percentage: string;
 };
-const techSkills: TechSkill[] = [
+export const techSkills: TechSkill[] = [
   {
     name: 'HTML',
     percentage: '77%',
@@ -68,5 +68,3 @@ const techSkills: TechSkill[] = [
     percentage: '30%',
   },
 ];
-
-export default techSkills;

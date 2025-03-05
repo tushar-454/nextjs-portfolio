@@ -1,6 +1,6 @@
-import Container from '../shared/Container';
-import SocialLinks from '../shared/SocialLinks';
-import Logo from '../shared/header/Logo';
+import { Container } from '../shared/Container';
+import { SocialLinks } from '../shared/SocialLinks';
+import { Logo } from '../shared/header/Logo';
 
 const Footer = () => {
   return (
@@ -28,4 +28,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export { Footer };

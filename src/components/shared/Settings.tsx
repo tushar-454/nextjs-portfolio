@@ -4,7 +4,7 @@ import { CiSettings } from 'react-icons/ci';
 import { FaHome } from 'react-icons/fa';
 import { MdNightlight, MdOutlineLightMode } from 'react-icons/md';
 
-const Setting = () => {
+const Settings = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
 
@@ -72,4 +72,4 @@ const Setting = () => {
   );
 };
 
-export default Setting;
+export { Settings };

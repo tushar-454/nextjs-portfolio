@@ -17,7 +17,7 @@ export type ProjectData = {
     backend: string;
   };
 };
-const projectsDatabase: ProjectData[] = [
+export const projectsDatabase: ProjectData[] = [
   {
     thumb: storeitThumb,
     title: 'StoreIt',
@@ -170,5 +170,3 @@ const projectsDatabase: ProjectData[] = [
     },
   },
 ];
-
-export default projectsDatabase;

@@ -8,7 +8,7 @@ type ArticleCardProps = {
 const ArticleCard = ({ article, number }: ArticleCardProps) => {
   return (
     <div
-      data-aos='fade-down'
+      data-aos='zoom-in'
       className='group relative rounded-lg bg-white p-5 shadow-md dark:bg-[#333]'
     >
       <span className='absolute -left-3 -top-3 grid size-10 place-content-center  rounded-full border-4 border-neutral-100 bg-slate-200 text-lg text-black transition group-hover:scale-125 dark:border-[#191919] dark:bg-slate-800 dark:text-slate-200'>

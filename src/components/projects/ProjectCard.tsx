@@ -21,7 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const { description, links, techstack, thumb, title } = project;
   return (
     <div
-      data-aos='flip-left'
+      data-aos='zoom-in'
       data-aos-duration='1000'
       className='flex flex-col rounded-2xl rounded-br-2xl bg-neutral-50 shadow-xl dark:bg-neutral-800'
     >
@@ -95,4 +95,4 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   );
 };
 
-export default ProjectCard;
+export { ProjectCard };
