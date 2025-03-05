@@ -24,6 +24,9 @@ const Footer = () => {
           </div>
         </div>
       </Container>
+      <p className='border-t-2 py-4 text-center text-neutral-400'>
+        &copy; 2025 All rights reserved by Tushar Imran
+      </p>
     </footer>
   );
 };

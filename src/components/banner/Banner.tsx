@@ -22,7 +22,7 @@ const Banner = () => {
             <a
               target='_blank'
               href={
-                'https://drive.google.com/file/d/1AXRj-Bk4MiAL24dg4UodXrRbkaRiE_YR/view'
+                'https://drive.google.com/file/d/1go3kQf0sAwPjLCh8jc-Y6S1fjSSemaOK/view'
               }
               className='mt-6 inline-block whitespace-nowrap rounded-full bg-emerald-300 p-3 px-7 text-lg text-black md:mt-8'
             >

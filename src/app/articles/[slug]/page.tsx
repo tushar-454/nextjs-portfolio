@@ -17,7 +17,7 @@ const ArticlePage: FC<{ params: Params }> = ({ params }) => {
   const article = articles.find((article) => article.slug === slug);
   if (!article) return null;
   return (
-    <main className='bg-neutral-100 py-8 dark:bg-[#191919]'>
+    <main className='min-h-screen bg-neutral-100 py-8 dark:bg-[#191919]'>
       <Container>
         <div data-aos='fade-in' className='markdown-body'>
           <ReactMarkdown

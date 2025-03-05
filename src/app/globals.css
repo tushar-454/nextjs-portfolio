@@ -1,3 +1,5 @@
+@import url('https://cdn.rawgit.com/sh4hids/bangla-web-fonts/solaimanlipi/stylesheet.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -67,6 +69,8 @@ html {
   color: var(--markdown-text-light, #24292e) !important;
   padding: 16px !important;
   border-radius: 6px !important;
+  font-family: 'SolaimanLipi', sans-serif !important;
+  font-size: 1.3rem !important;
 }
 
 .dark .markdown-body {
@@ -78,6 +82,7 @@ html {
 .markdown-body pre {
   background-color: var(--markdown-code-bg-light, #f6f8fa) !important;
   color: var(--markdown-code-text-light, #1e1e1e) !important;
+  font-family: 'SolaimanLipi', sans-serif !important;
 }
 
 .dark .markdown-body pre {
@@ -108,4 +113,10 @@ html {
 }
 .dark .markdown-body ul {
   list-style: var(--markdown-text-dark, #c9d1d9) !important;
+}
+
+/* ///////////////////////////////////////////// */
+
+.articlesList {
+  font-family: 'SolaimanLipi', sans-serif !important;
 }

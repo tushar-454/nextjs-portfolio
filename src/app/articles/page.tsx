@@ -7,13 +7,13 @@ import Link from 'next/link';
 
 export default function ArticlesPage() {
   return (
-    <main className='h-screen bg-neutral-100 dark:bg-[#191919]'>
+    <main className='min-h-screen bg-neutral-100 dark:bg-[#191919]'>
       <Container>
         <PageHead
           title='Articles'
           description='Here is my all technical articles'
         />
-        <div className='flex w-full flex-wrap gap-6 pb-10'>
+        <div className='articlesList flex w-full flex-wrap gap-6 pb-10'>
           {articles.map((article, index) => (
             <Link
               key={index}
